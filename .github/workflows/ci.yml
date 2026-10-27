@@ -17,3 +17,8 @@ jobs:
         run: python -m radar demo --no-open --out demo-out
       - name: Tests
         run: python -m unittest discover -s tests -v
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+      - name: Gmail version rules
+        run: node --test tests/gmail_rules.test.js

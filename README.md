@@ -30,7 +30,15 @@ yourself.
 - **Drafts you can trust.** Templates by default. If you use an AI model, every draft is checked,
   and one that adds a price, date or amount that wasn't in your email is thrown out.
 
-## Try it in 10 seconds
+## No terminal? Use the Gmail version
+
+Paste one file into [script.google.com](https://script.google.com), click **Run**, and that's it.
+Every morning, your follow-ups are waiting in **Gmail Drafts**, inside the original conversations,
+plus a Google Sheet with the list. It never emails your customers: you check each draft and press Send.
+
+**[Set up the Gmail version in 5 minutes →](gmail/SETUP.md)**
+
+## Try it in 10 seconds (Python version)
 
 You need Python 3.9 or newer. There's nothing to install.
 
@@ -132,6 +140,18 @@ cp -r skills/follow-up-radar ~/.claude/skills/
 ```
 
 Then ask: *"Run follow-up-radar on my Gmail and help me with the follow-ups."*
+
+## Two versions, same rules
+
+| | Gmail version | Python version |
+|---|---|---|
+| Setup | Paste into script.google.com | `python3 -m radar` |
+| Email | Gmail and Google Workspace | Gmail, iCloud, Yahoo, Fastmail, exports |
+| Runs | Every morning, by itself | When you run it |
+| Drafts | In Gmail Drafts, in the thread | Report page with "Open in email" |
+| AI drafts | Not yet | Optional, checked for made-up numbers |
+
+Both use the same rules for what counts as a quiet conversation, and both are tested in CI.
 
 ## Limits
 

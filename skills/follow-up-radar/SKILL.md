@@ -32,6 +32,8 @@ For their own mail, ask which provider they use.
 - Google Takeout export: `python3 -m radar mbox PATH --me ADDRESS`
 - Folder of .eml files: `python3 -m radar eml PATH --me ADDRESS`
 - Outlook and Hotmail over IMAP are not supported yet. Say so.
+- If the user doesn't want a terminal at all and uses Gmail, point them to the no-install Gmail
+  version: `gmail/SETUP.md` (paste one file into script.google.com, run `setup`).
 
 Useful options: `--days`, `--wait`, `--ignore-domain` (their own company), `--name`,
 `--model llama3.2` for local AI drafts with Ollama.
